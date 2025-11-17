@@ -2,6 +2,9 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.10.
 
+## Description
+This project involves developing an application consisting of an image gallery that can perform certain actions with the images. The project is being developed using Angular.
+
 ## Development server
 
 To start a local development server, run:
