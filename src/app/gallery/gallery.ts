@@ -12,16 +12,16 @@ export class Gallery {
     {
       id: 1,
       source: "https://picsum.photos/id/964/300/200.jpg",
-      alt: "Image 1",
-      title: "Image 1",
+      alt: "Picture of a snowy road",
+      title: "Snowy road",
       selected: false,
       deleted: false
     },
     {
       id: 2,
       source: "https://picsum.photos/id/864/300/200.jpg",
-      alt: "Image 2",
-      title: "Image 2",
+      alt: "Big city skyline",
+      title: "Big city",
       selected: false,
       deleted: false
     },
@@ -29,7 +29,7 @@ export class Gallery {
       id: 3,
       source: "https://picsum.photos/id/764/300/200.jpg",
       alt: "Image 3",
-      title: "Image 3",
+      title: "Glass building and palm trees",
       selected: false,
       deleted: false
     },
@@ -37,7 +37,7 @@ export class Gallery {
       id: 4,
       source: "https://picsum.photos/id/664/300/200.jpg",
       alt: "Image 4",
-      title: "Image 4",
+      title: "Snowy mountains",
       selected: false,
       deleted: false
     },
@@ -45,7 +45,7 @@ export class Gallery {
       id: 5,
       source: "https://picsum.photos/id/564/300/200.jpg",
       alt: "Image 5",
-      title: "Image 5",
+      title: "Narrow canyon in the mountains",
       selected: false,
       deleted: false
     },
@@ -53,7 +53,7 @@ export class Gallery {
       id: 6,
       source: "https://picsum.photos/id/464/300/200.jpg",
       alt: "Image 6",
-      title: "Image 6",
+      title: "Book of criminals",
       selected: false,
       deleted: false
     },
@@ -61,7 +61,7 @@ export class Gallery {
       id: 7,
       source: "https://picsum.photos/id/364/300/200.jpg",
       alt: "Image 7",
-      title: "Image 7",
+      title: "Airplane parking",
       selected: false,
       deleted: false
     },
@@ -69,7 +69,7 @@ export class Gallery {
       id: 8,
       source: "https://picsum.photos/id/264/300/200.jpg",
       alt: "Image 8",
-      title: "Image 8",
+      title: "Breakwater",
       selected: false,
       deleted: false
     },
@@ -77,7 +77,7 @@ export class Gallery {
       id: 9,
       source: "https://picsum.photos/id/164/300/200.jpg",
       alt: "Image 9",
-      title: "Image 9",
+      title: "Water channel in a village",
       selected: false,
       deleted: false
     }
