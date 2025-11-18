@@ -1,0 +1,19 @@
+
+.first {
+    transform: scale(1.2);
+    /* border: 2px solid black; */
+    /* width: 80%; */
+}
+
+.first img {
+    border: 2px solid lightgray; 
+}
+
+.gallery-item img {
+    display: block;
+}
+
+/* .gallery-item :not(.first) {
+    border: 2px solid lightgray;
+} */
+
