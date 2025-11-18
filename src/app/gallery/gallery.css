@@ -1,16 +1,19 @@
 
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: 1fr; 
     padding: 2rem;
-    /* grid-template-rows: 2fr 1fr 1fr;  */
     gap: 3rem;
     margin: 3rem;
 }
 
 @media screen and (min-width: 478px) {
     .gallery-grid {
-        /* grid-template-columns: 1fr 1fr 1fr; */
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 }

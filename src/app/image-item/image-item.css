@@ -1,8 +1,32 @@
 
+.gallery-item {
+    cursor: pointer;
+    overflow: hidden;
+    place-items: center;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 1rem;
+}
+
+.gallery-item p {
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ 
 .first {
+    transition: transform 0.3s ease;
     transform: scale(1.2);
-    /* border: 2px solid black; */
-    /* width: 80%; */
+}
+
+.first:hover {
+    transform: scale(1.22);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .first img {
@@ -10,6 +34,8 @@
 }
 
 .gallery-item img {
+    margin-top: 1rem;
+    border-radius: 1rem;
     display: block;
 }
 

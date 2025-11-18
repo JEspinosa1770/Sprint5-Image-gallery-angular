@@ -1,6 +1,6 @@
 <h1>Image Gallery</h1>
 
- <div class="gallery-grid">
+<div class="gallery-grid">
     @for (image of imagesArray; track image.id; let first = $first, last = $last) {
         <app-image-item [image]="image" [isFeatured]="first" />
     }
