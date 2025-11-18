@@ -1,10 +1,7 @@
-<h2>Image Gallery</h2>
+<h1>Image Gallery</h1>
 
  <div class="gallery-grid">
     @for (image of imagesArray; track image.id; let first = $first, last = $last) {
-        <app-image-item [image]="image"
-        [isFeatured]="first"
-        />
-        <!-- [ngStyle]="{'transform': first ? 'scale(1.5)' : 'scale(1)'}"  -->
+        <app-image-item [image]="image" [isFeatured]="first" />
     }
 </div>

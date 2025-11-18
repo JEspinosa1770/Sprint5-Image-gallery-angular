@@ -4,9 +4,9 @@ import { Image } from '../models/image';
   selector: 'app-image-item',
   imports: [],
   template: `
-    <div class="gallery-item">
+    <div [class.first]="isFeatured()" class="gallery-item">
       <img [src]="image().source" [alt]="image().alt" [title]="image().title">
-      <p>{{ image().title }} - {{isFeatured()}}</p>
+      <p>{{ image().title }}</p>
     </div>
   `,
   styleUrl: './image-item.css',
