@@ -1,12 +1,12 @@
 
 .gallery-item {
-    cursor: pointer;
     overflow: hidden;
     place-items: center;
     display: grid;
     width: 100%;
     grid-template-columns: 8fr 1fr;
     grid-template-rows: 5fr 1fr;
+    transition: transform 0.3s ease;
 }
 
 .gallery-item:hover {
@@ -22,10 +22,12 @@
     font-weight: 500;
     font-family: Arial, Helvetica, sans-serif;
 }
- 
-.first {
-    transition: transform 0.3s ease;
-    transform: scale(1.2);
+
+.gallery-item.first {
+    transform: scale(1.2); 
+    /* grid-column: span 2;
+    grid-row: span 2;
+    background-color: red; */
 }
 
 .first:hover {
@@ -44,7 +46,19 @@
 }
 
 #trash {
+    cursor: pointer;
     border-radius: none;
     grid-column: 2;
     width: 25px;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+button:hover {
+    background: border-box whitesmoke;
+    border-radius: 50%;
+    padding: 0.4rem;
 }

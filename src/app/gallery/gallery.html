@@ -1,7 +1,7 @@
 <h1>Image Gallery</h1>
 
 <div class="gallery-grid">
-    @for (image of imagesArray; track image.id; let first = $first, last = $last) {
-        <app-image-item [image]="image" [isFeatured]="first" />
+    @for (image of imagesArray; track image.id; let first = $first, last = $last, index = $index) {
+        <app-image-item [image]="image" [isFeatured]="first" [indexImage]="index"/>
     }
 </div>
