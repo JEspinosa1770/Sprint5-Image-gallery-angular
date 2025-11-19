@@ -3,6 +3,10 @@
     cursor: pointer;
     overflow: hidden;
     place-items: center;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 8fr 1fr;
+    grid-template-rows: 5fr 1fr;
 }
 
 .gallery-item:hover {
@@ -29,17 +33,18 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.first img {
+.first > #picture {
     border: 2px solid lightgray; 
 }
 
-.gallery-item img {
+#picture {
     margin-top: 1rem;
     border-radius: 1rem;
-    display: block;
+    grid-column: 1 / 3;
 }
 
-/* .gallery-item :not(.first) {
-    border: 2px solid lightgray;
-} */
-
+#trash {
+    border-radius: none;
+    grid-column: 2;
+    width: 25px;
+}

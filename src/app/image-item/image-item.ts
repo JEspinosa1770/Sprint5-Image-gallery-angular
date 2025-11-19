@@ -5,8 +5,9 @@ import { Image } from '../models/image';
   imports: [],
   template: `
     <div [class.first]="isFeatured()" class="gallery-item">
-      <img [src]="image().source" [alt]="image().alt" [title]="image().title">
+      <img id="picture" [src]="image().source" [alt]="image().alt" [title]="image().title">
       <p>{{ image().title }}</p>
+      <img id="trash" src="./lecho.png" alt="trash">
     </div>
   `,
   styleUrl: './image-item.css',
