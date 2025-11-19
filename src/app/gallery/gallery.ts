@@ -4,6 +4,7 @@ import { ImageItem } from '../image-item/image-item';
 @Component({
   selector: 'app-gallery',
   imports: [ImageItem],
+  template: `onNotify(msg: string)`,
   templateUrl: './gallery.html',
   styleUrl: './gallery.css',
 })
@@ -82,4 +83,16 @@ export class Gallery {
       deleted: false
     }
   ];
+  
+  get filteDeletedImages() {
+    return this.imagesArray.filter(img => !img.deleted);
+  }
+
+  onNotify(imageId: number) {
+    console.log(imageId)
+    const imageToDelete = this.imagesArray.find(img => img.id === imageId);
+    if (imageToDelete) {
+      imageToDelete.deleted = true;
+    }
+  };
 }
