@@ -10,5 +10,9 @@ import { Image } from '../models/image';
 export class ImageItem {
   image = input.required<Image>();
   isFeatured = input<boolean>();
-  notify = output<number>()
+  notify = output<number>();
+
+  sendToParent () {
+    this.notify.emit(this.image().id);
+  }
 }

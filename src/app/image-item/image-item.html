@@ -2,5 +2,5 @@
 <div class="gallery-item" [class.first]="isFeatured()">
     <img id="picture" [src]="image().source" [alt]="image().alt" [title]="image().title">
     <p>{{ image().title }}</p>
-    <button (click)="notify.emit(image().id)"><img id="trash" src="./lecho.png" alt="trash"></button>
+    <button (click)="sendToParent()"><img id="trash" src="./lecho.png" alt="trash"></button>
 </div>
