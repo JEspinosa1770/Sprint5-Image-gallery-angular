@@ -83,7 +83,7 @@ export class Gallery {
       deleted: false
     }
   ];
-  
+
   get filteDeletedImages() {
     return this.imagesArray.filter(img => !img.deleted);
   }
@@ -91,7 +91,8 @@ export class Gallery {
   onNotify(imageId: number) {
     console.log(imageId)
     const imageToDelete = this.imagesArray.find(img => img.id === imageId);
-    if (imageToDelete) {
+    const sure = window.confirm(`Do you want to delete the image?`);
+    if (sure && imageToDelete) {
       imageToDelete.deleted = true;
     }
   };
