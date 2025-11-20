@@ -1,12 +1,22 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { inputBinding, provideZonelessChangeDetection, signal } from '@angular/core';
+import { provideZonelessChangeDetection } from '@angular/core';
 import { Image } from '../models/image';
 import { ImageItem } from './image-item';
+import { By } from '@angular/platform-browser';
 
 describe('ImageItem', () => {
   let component: ImageItem;
   let fixture: ComponentFixture<ImageItem>;
-
+  
+  const mockImage: Image = {
+    id: 1,
+    source: 'https://example.com/test-image.jpg',
+    alt: 'Test image alt text',
+    title: 'Test Image Title',
+    selected: false,
+    deleted: false
+  };
+  
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ImageItem],
@@ -16,15 +26,6 @@ describe('ImageItem', () => {
 
     fixture = TestBed.createComponent(ImageItem);
     component = fixture.componentInstance;
-
-    const mockImage: Image = {
-      id: 1,
-      source: 'https://example.com/test-image.jpg',
-      alt: 'Test image alt text',
-      title: 'Test Image Title',
-      selected: false,
-      deleted: false
-    };
     
     fixture.componentRef.setInput('image', mockImage);
     fixture.componentRef.setInput('isFeatured', false);
@@ -32,7 +33,7 @@ describe('ImageItem', () => {
     fixture.detectChanges();
   });
   
-  it('should create', () => {
+  it('should class ImageItem create', () => {
     expect(component).toBeTruthy();
   });
 
@@ -53,4 +54,26 @@ describe('ImageItem', () => {
     expect(paragraph).toBeTruthy();
     expect(paragraph.textContent).toContain('Test Image Title');
   });
+
+  it('should emit the correct value when button is clicked', () => {
+    spyOn(component.notify, 'emit');
+
+    const clickedButton = fixture.debugElement.query(By.css('button'));
+    clickedButton.triggerEventHandler('click', null);
+
+    expect(component.notify.emit).toHaveBeenCalledWith(1);
+  });
+
+  it('should emit image id when sendToParent is called', () => {
+    spyOn(component.notify, 'emit');
+
+    component.sendToParent();
+
+    expect(component.notify.emit).toHaveBeenCalledWith(1);
+    expect(component.notify.emit).toHaveBeenCalledTimes(1);
+  });
+
+  it('should have notify output configured', () => {
+    expect(component.notify).toBeDefined();
+  });  
 });
