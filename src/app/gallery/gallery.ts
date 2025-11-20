@@ -4,7 +4,6 @@ import { ImageItem } from '../image-item/image-item';
 @Component({
   selector: 'app-gallery',
   imports: [ImageItem],
-  template: `onNotify(msg: string)`,
   templateUrl: './gallery.html',
   styleUrl: './gallery.css',
 })
@@ -84,15 +83,13 @@ export class Gallery {
     }
   ];
 
-  get filterDeletedImages() {
+  filterDeletedImages() {
     return this.imagesArray.filter(img => !img.deleted);
   }
 
   onNotify(imageId: number) {
-    console.log(imageId)
     const imageToDelete = this.imagesArray.find(img => img.id === imageId);
-    const sure = window.confirm(`Do you want to delete the image?`);
-    if (sure && imageToDelete) {
+    if (window.confirm(`Do you want to delete the image?`) && imageToDelete) {
       imageToDelete.deleted = true;
     }
   };
