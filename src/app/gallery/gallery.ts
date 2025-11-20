@@ -84,7 +84,7 @@ export class Gallery {
     }
   ];
 
-  get filteDeletedImages() {
+  get filterDeletedImages() {
     return this.imagesArray.filter(img => !img.deleted);
   }
 

@@ -1,7 +1,7 @@
 <h1>Image Gallery</h1>
 
 <div class="gallery-grid">
-    @for (image of filteDeletedImages; track image.id; let first = $first) {
+    @for (image of filterDeletedImages; track image.id; let first = $first) {
         <app-image-item [image]="image" [isFeatured]="first" (notify)="onNotify($event)"/>
     }
 </div>
