@@ -39,18 +39,19 @@ describe('ImageItem', () => {
 
   it('should display image with correct properties', () => {
     const compiled = fixture.nativeElement;
-    const img = compiled.querySelector('img');
-    
+    const img = compiled.querySelector('img') as HTMLImageElement;
+
     expect(img).toBeTruthy();
     expect(img.src).toContain('test-image.jpg');
     expect(img.alt).toBe('Test image alt text');
     expect(img.title).toBe('Test Image Title');
+    
   });
 
   it('should display image title in paragraph', () => {
     const compiled = fixture.nativeElement;
-    const paragraph = compiled.querySelector('p');
-    
+    const paragraph = compiled.querySelector('p') as HTMLParagraphElement;
+
     expect(paragraph).toBeTruthy();
     expect(paragraph.textContent).toContain('Test Image Title');
   });

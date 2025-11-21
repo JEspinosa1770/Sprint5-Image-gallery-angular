@@ -50,7 +50,7 @@ describe('Gallery', () => {
       deleted: true
     },
   ]
-  const resultFiltered = component.filterDeletedImages();
+  const resultFiltered: Image[] = component.filterDeletedImages();
 
   expect(resultFiltered.length).toBe(2);
   expect(resultFiltered.every(img => !img.deleted)).toBe(true);
@@ -62,16 +62,16 @@ describe('Gallery', () => {
     const imageId: number = 1;
     component.onNotify(imageId);
 
-    const deletedImage = component.imagesArray.find(img => img.id === imageId);
+    const deletedImage: Image | undefined = component.imagesArray.find(img => img.id === imageId);
     expect(deletedImage?.deleted).toBe(true);
   });
 
   it('should not mark image as deleted when user cancels in onNotify', () => {
     spyOn(window, 'confirm').and.returnValue(false);
-    const imageId = 1;
+    const imageId: number = 1;
     component.onNotify(imageId);
 
-    const nonDeletedImage = component.imagesArray.find(img => img.id === imageId);
+    const nonDeletedImage: Image | undefined = component.imagesArray.find(img => img.id === imageId);
     expect(nonDeletedImage?.deleted).toBe(false);
   });
 
