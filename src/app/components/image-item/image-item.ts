@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
-import { Image } from '../models/image';
+import { Image } from '../../models/image';
 @Component({
   selector: 'app-image-item',
   imports: [],
