@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideZonelessChangeDetection } from '@angular/core';
-import { Image } from '../models/image';
+import { Image } from '../../models/image';
 import { ImageItem } from './image-item';
 import { By } from '@angular/platform-browser';
 
