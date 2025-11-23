@@ -13,7 +13,7 @@ Este proyecto ha sido generado usando [Angular CLI](https://github.com/angular/a
 5. [Componentes](#componentes)
 5. [Decisiones y Justificaciones](#decisiones-y-justificaciones)
 5. [Vistas del proyecto](#vistas-del-proyecto)
-6. [🎁 Demo](#-demo)
+6. [Demo](#demo)
 8. [Contribuciones y Contacto](#contribuciones-y-contacto)
 
 ## Descripción
