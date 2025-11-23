@@ -5,7 +5,7 @@ import { ImageItem } from '../image-item/image-item';
   selector: 'app-gallery',
   imports: [ImageItem],
   templateUrl: './gallery.html',
-  styleUrl: './gallery.css',
+  styleUrl: './gallery.css'
 })
 export class Gallery {
   imagesArray: Image[] = [
